@@ -1,0 +1,62 @@
+.Users {
+    flex: 5;
+}
+
+.UserInfo {
+    display: flex;
+    align-items: center;
+}
+
+.UserAvt {
+    width: 35px;
+    height: 35px;
+    border-radius: 999px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.UserIcon {
+    display: flex;
+    align-items: center;
+}
+
+.UserIconEdit{
+    background-color: #66DE93;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 32px !important;
+    cursor: pointer;
+}
+.UserIconEdit:hover {
+    background-color: #3ecc75;
+}
+
+.UserIconDelete{
+    background-color: #F54748;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 32px !important;
+    cursor: pointer;
+}
+.UserIconDelete:hover{
+    background-color: #db2323;
+}
+
+.UserStatus {
+    line-height: 16px;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.UserStatus.Active{
+    background-color: #d6fde5;
+    color: #3ecc75;
+}
+.UserStatus.Inactive{
+    background-color: #ffd9d9;
+    color: #f73737;
+}
