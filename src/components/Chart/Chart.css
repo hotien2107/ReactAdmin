@@ -1,0 +1,12 @@
+.Chart {
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 8px -5px #333;
+}
+
+.ChartTitle {
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 20px;
+}

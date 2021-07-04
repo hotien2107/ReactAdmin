@@ -1,0 +1,53 @@
+.Featured {
+    flex: 5;
+    display: flex;
+    justify-content: space-between;
+}
+
+.FeaturedItem {
+    width: 100%;
+    height: max-content;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 8px -5px #333;
+    color: #333;
+    cursor: pointer;
+}
+
+.FeaturedTitle {
+    font-size: 20px;
+}
+
+.FeaturedInf {
+    display: flex;
+    margin: 15px 0;
+}
+
+.FeaturedInf .FeaturedPrice {
+    font-size: 38px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.FeaturedInf .FeaturedRating {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+.FeaturedInf .FeaturedRating .FeaturedIcon{
+    font-size: 16px;
+}
+
+.positive{
+    color: green;
+}
+
+.negative{
+    color: red;
+}
+
+.FeaturedSub {
+    color: #555;
+    font-size: 16px;
+}
