@@ -1,0 +1,46 @@
+.WidgetSm {
+    flex: 1;
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 8px -5px #333;
+}
+
+.WidgetSmTitle {
+    font-size: 24px;
+    font-weight: 600;
+}
+.WidgetSmMember {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.WidgetSmMemberAvt {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    object-fit: cover;
+}
+
+.WidgetSmMemberName {
+    font-weight: 600;
+}
+
+.WidgetSmMemberJob {
+    font-weight: 300;
+}
+
+.WidgetSmDisplay {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+
+.WidgetSmIcon {
+    font-size: 16px !important;
+    margin-right: 5px;
+}

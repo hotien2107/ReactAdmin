@@ -3,7 +3,8 @@ import Featured from "../../components/Featured/Featured"
 import Chart from "../../components/Chart/Chart"
 import { chartData } from "../../data/ChartData"
 import { featuredData } from "../../data/FeaturedData"
-
+import WidgetLg from "../../components/Widget/Large/WidgetLg"
+import WidgetSm from "../../components/Widget/Small/WidgetSm"
 
 
 export default function Home() {
@@ -11,29 +12,10 @@ export default function Home() {
         <div className="Home">
             <Featured data={featuredData}/>
             <Chart data={chartData}/>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+            <div className="Widget">
+                <WidgetSm/>
+                <WidgetLg/>
+            </div>
         </div>
     )
 }

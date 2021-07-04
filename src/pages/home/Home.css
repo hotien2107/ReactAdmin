@@ -1,3 +1,7 @@
 .Home {
     flex: 5;
 }
+
+.Widget{
+    display: flex;
+}
