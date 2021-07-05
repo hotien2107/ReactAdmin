@@ -1,19 +1,20 @@
 import "./Users.css"
 import { DataGrid } from '@material-ui/data-grid';
-import {Edit, DeleteForever} from "@material-ui/icons"
+import { Edit, DeleteForever } from "@material-ui/icons"
 import { UserList } from "../../data/UserList";
+import { Link } from "react-router-dom";
 
 export default function Users() {
     const columns = [
-        { 
-            field: 'id', 
-            headerName: 'ID', 
-            width: 90 
+        {
+            field: 'id',
+            headerName: 'ID',
+            width: 90
         },
         {
-            field: 'user', 
-            headerName: 'User', 
-            width: 300, 
+            field: 'user',
+            headerName: 'User',
+            width: 300,
             renderCell: (params) => {
                 return (
                     <div className="UserInfo">
@@ -23,17 +24,17 @@ export default function Users() {
                 )
             }
         },
-        { 
-            field: 'mail', 
-            headerName: 'Mail', 
-            width: 300 
+        {
+            field: 'mail',
+            headerName: 'Mail',
+            width: 300
         },
         {
             field: 'status',
             headerName: 'Status',
             width: 120,
             renderCell: (params) => {
-                if(params.row.status === 'Active'){
+                if (params.row.status === 'Active') {
                     return (
                         <div className={"UserStatus " + params.row.status}>
                             {params.row.status}
@@ -46,7 +47,7 @@ export default function Users() {
                     </div>
                 )
             }
-            
+
         },
         {
             field: 'transactions',
@@ -57,16 +58,18 @@ export default function Users() {
             field: 'action',
             headerName: 'Action',
             width: 160,
-            renderCell: () => (
+            renderCell: (params) => (
                 <div className="UserIcon">
-                    <Edit className="UserIconEdit"/>
-                    <DeleteForever className="UserIconDelete"/>
+                    <Link to={"/user/" + params.row.id} className="Link">
+                        <Edit className="UserIconEdit" />
+                    </Link>
+                    <DeleteForever className="UserIconDelete" />
                 </div>
             )
         },
     ];
 
-    
+
     return (
         <div className="Users">
             <DataGrid rows={UserList} disableSelectionOnClick columns={columns} pageSize={10} checkboxSelection />

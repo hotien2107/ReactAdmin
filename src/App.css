@@ -6,3 +6,9 @@
     flex: 5;
     /* background-color: blueviolet; */
 }
+
+.Link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}

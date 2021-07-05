@@ -25,6 +25,7 @@
     font-weight: 600;
     cursor: pointer;
     border-radius: 999px;
+    width: 100%;
 }
 .Item.active, .Item:hover{
     color: white;

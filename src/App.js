@@ -10,24 +10,25 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <TopBar />
-      <div className="container">
-        <SideBar />
-        <Router>
+    <Router>
+      <div className="App">
+        <TopBar />
+        <div className="container">
+          <SideBar />
           <Switch>
-
             <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/home">
               <Home />
             </Route>
             <Route path="/users">
               <Users />
             </Route>
-
           </Switch>
-        </Router>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
