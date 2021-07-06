@@ -1,5 +1,8 @@
 .Users {
     flex: 5;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 8px -5px #333;
 }
 
 .UserInfo {
@@ -21,7 +24,7 @@
 }
 
 .UserIconEdit{
-    background-color: #66DE93;
+    background-color: #66a8de;
     color: white;
     padding: 5px;
     border-radius: 5px;
@@ -30,7 +33,7 @@
     cursor: pointer;
 }
 .UserIconEdit:hover {
-    background-color: #3ecc75;
+    background-color: #3e8ccc;
 }
 
 .UserIconDelete{
@@ -60,3 +63,4 @@
     background-color: #ffd9d9;
     color: #f73737;
 }
+

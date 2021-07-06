@@ -60,7 +60,7 @@ export default function Users() {
             width: 160,
             renderCell: (params) => (
                 <div className="UserIcon">
-                    <Link to={"/user/" + params.row.id} className="Link">
+                    <Link to={"/User/" + params.row.id} className="Link">
                         <Edit className="UserIconEdit" />
                     </Link>
                     <DeleteForever className="UserIconDelete" />

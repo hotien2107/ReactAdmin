@@ -5,6 +5,7 @@ import TopBar from "./components/topBar/TopBar";
 import SideBar from "./components/SideBar/SideBar";
 import Home from "./pages/home/Home";
 import Users from "./pages/users/Users";
+import User from "./pages/users/user/User"
 
 import "./App.css";
 
@@ -19,14 +20,14 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/home">
+            <Route path="/Home">
               <Home />
             </Route>
-            <Route path="/home">
-              <Home />
-            </Route>
-            <Route path="/users">
+            <Route path="/Users">
               <Users />
+            </Route>
+            <Route path="/User/:userId">
+              <User />
             </Route>
             
           </Switch>
