@@ -1,88 +1,110 @@
-import React from 'react'
 import { Dashboard, Poll, Assignment, Whatshot, AssignmentInd, ShoppingBasket, MonetizationOn, Mail, Feedback, Message, Person } from "@material-ui/icons"
 import './SideBar.css'
-import { Link } from 'react-router-dom'
+import SideBarMenu from './SideBarMenu'
+
+
+const Menu = [
+    {
+        SideBarMenuName: "Dashboard",
+        SideBarItem: [
+            {
+                SideBarItemName:"Home",
+                SideBarItemIcon: Dashboard,
+                status: "active"
+            },
+            {
+                SideBarItemName:"Analytics",
+                SideBarItemIcon: Poll,
+                status: "inactive"
+            },
+            {
+                SideBarItemName:"Hot",
+                SideBarItemIcon: Whatshot,
+                status: "inactive"
+            },
+        ],
+
+    },
+    {
+        SideBarMenuName: "Quick Menu",
+        SideBarItem: [
+            {
+                SideBarItemName:"Users",
+                SideBarItemIcon: AssignmentInd,
+                status: "inactive"
+            },
+            {
+                SideBarItemName:"Products",
+                SideBarItemIcon: ShoppingBasket,
+                status: "inactive"
+            },
+            {
+                SideBarItemName:"Transactions",
+                SideBarItemIcon: MonetizationOn,
+                status: "inactive"
+            },
+        ],
+
+    },
+    {
+        SideBarMenuName: "Notifications",
+        SideBarItem: [
+            {
+                SideBarItemName:"Mail",
+                SideBarItemIcon: Mail,
+                status: "inactive"
+            },
+            {
+                SideBarItemName:"Feedback",
+                SideBarItemIcon: Feedback,
+                status: "inactive"
+            },
+            {
+                SideBarItemName:"Message",
+                SideBarItemIcon: Message,
+                status: "inactive"
+            },
+        ],
+
+    },
+    {
+        SideBarMenuName: "Staff",
+        SideBarItem: [
+            {
+                SideBarItemName:"Manager",
+                SideBarItemIcon: Assignment,
+                status: "inactive"
+            },
+        ],
+
+    },
+    {
+        SideBarMenuName: "Personal Information",
+        SideBarItem: [
+            {
+                SideBarItemName:"Information",
+                SideBarItemIcon: Person,
+                status: "inactive"
+            },
+        ],
+
+    },
+];
 
 export default function SideBar() {
+    
     return (
         <div className="SideBar">
-
+            
             <div className="SideBarWrapper">
-                <div className="SideBarMenu">
-                    <h3 className="Title">Dashboard</h3>
-
-                    <ul className="List">
-                        <Link to="/" className="Link">
-                            <li className="Item active">
-                                <Dashboard className="Icon" />
-                                Home
-                            </li>
-                        </Link>
-                        <li className="Item">
-                            <Poll className="Icon" />
-                            Analytics
-                        </li>
-                        <li className="Item">
-                            <Whatshot className="Icon" />
-                            Hot
-                        </li>
-                    </ul>
-                </div>
-                <div className="SideBarMenu">
-                    <h3 className="Title">Quick Menu</h3>
-                    <ul className="List">
-                        <Link to="/users" className="Link">
-                        <li className="Item">
-                            <AssignmentInd className="Icon" />
-                            Users
-                        </li>
-                        </Link>
-
-                        <li className="Item">
-                            <ShoppingBasket className="Icon" />
-                            Products
-                        </li>
-                        <li className="Item">
-                            <MonetizationOn className="Icon" />
-                            Transactions
-                        </li>
-                    </ul>
-                </div>
-                <div className="SideBarMenu">
-                    <h3 className="Title">Notifications</h3>
-                    <ul className="List">
-                        <li className="Item">
-                            <Mail className="Icon" />
-                            Mail
-                        </li>
-                        <li className="Item">
-                            <Feedback className="Icon" />
-                            Feedback
-                        </li>
-                        <li className="Item">
-                            <Message className="Icon" />
-                            Message
-                        </li>
-                    </ul>
-                </div>
-                <div className="SideBarMenu">
-                    <h3 className="Title">Staff</h3>
-                    <ul className="List">
-                        <li className="Item">
-                            <Assignment className="Icon" />
-                            Manager
-                        </li>
-                    </ul>
-                </div>
-                <div className="SideBarMenu">
-                    <h3 className="Title">Personal</h3>
-                    <ul className="List">
-                        <li className="Item">
-                            <Person className="Icon" />
-                            Information
-                        </li>
-                    </ul>
-                </div>
+                {Menu.map((value, key) => (
+                    <SideBarMenu 
+                    key={key}
+                    SideBarMenuName={value.SideBarMenuName}
+                    SideBarItem={value.SideBarItem}
+                    status={value.status}
+                    />
+                ))}
 
             </div>
 
