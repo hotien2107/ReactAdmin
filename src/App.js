@@ -5,8 +5,8 @@ import TopBar from "./components/topBar/TopBar";
 import SideBar from "./components/SideBar/SideBar";
 import Home from "./pages/home/Home";
 import Users from "./pages/users/Users";
-import User from "./pages/users/user/User"
-
+import User from "./pages/user/User";
+  
 import "./App.css";
 
 function App() {
@@ -29,7 +29,6 @@ function App() {
             <Route path="/User/:userId">
               <User />
             </Route>
-            
           </Switch>
         </div>
       </div>

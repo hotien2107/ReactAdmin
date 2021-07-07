@@ -14,7 +14,7 @@ export default function Users() {
         {
             field: 'user',
             headerName: 'User',
-            width: 300,
+            width: 250,
             renderCell: (params) => {
                 return (
                     <div className="UserInfo">
@@ -72,7 +72,19 @@ export default function Users() {
 
     return (
         <div className="Users">
-            <DataGrid rows={UserList} disableSelectionOnClick columns={columns} pageSize={10} checkboxSelection />
+            <div className="UsersContainer">
+
+                <div className="UsersTitle">
+                    User List
+                </div>
+                <DataGrid
+                    rows={UserList}
+                    disableSelectionOnClick columns={columns}
+                    pageSize={7}
+                    checkboxSelection
+                    className="UsersTable"
+                />
+            </div>
         </div>
     )
 }

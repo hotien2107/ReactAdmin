@@ -1,21 +1,23 @@
 import "./SideBar.css"
-import { Link } from "react-router-dom";
-import { useState } from 'react';
+import { Link, useLocation } from "react-router-dom";
+
 
 
 
 export default function SideBarItem(props) {
-    let Status = props.status;
+    const location = useLocation();
+
+    //destructuring pathname from location
+    const { pathname } = location;
+
+    //Javascript split method to get the name of the path in array
+    const splitLocation = pathname.split("/");
+
     const Icon = props.SideBarItemIcon;
-    const [status, setStatus] = useState(Status);
-    const checkFocus = () =>{
-        setStatus("active");
-    }
-    const dontFocus = () =>{
-        setStatus("inactive");
-    }
+    let status = splitLocation[1] === props.SideBarItemName ? "active" : "";
+
     return (
-        <Link to={"/" + props.SideBarItemName} className="Link" onFocus={checkFocus} onBlur={dontFocus}> 
+        <Link to={"/" + props.SideBarItemName} className="Link ">
             <li className={"Item " + status}>
                 <Icon className="Icon" />
                 {props.SideBarItemName}

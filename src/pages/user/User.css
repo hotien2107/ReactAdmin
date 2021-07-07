@@ -1,17 +1,24 @@
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .UserPage {
   flex: 5;
-  padding: 20px;
 }
 
 .UserPageTitle {
     font-weight: 700;
     font-size: 36px;
-    margin-bottom: 40px;
+    margin: 20px 0 40px 20px;
 }
 
 .UserPageContainer {
     display: flex;
     height: max-content;
+    padding: 20px;
 }
 
 .UserPageInfo {
@@ -43,9 +50,6 @@
 .UserPageInfoJob {
   font-weight: 200;
   color: #555;
-}
-
-.UserPageInfoDetail {
 }
 
 .UserPageInfoDetailList {
@@ -146,6 +150,22 @@
     color: white;
     cursor: pointer;
 }
-.BtnSaveEditUser {
+.BtnSaveEditUser:hover {
     background-color: #11aa4c;
+}
+
+.UserPageBack {
+    font-size: 18px;
+    margin: 20px 0 40px 20px;
+
+    padding: 7px 20px;
+    border: none;
+    background-color: #fad577;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.UserPageBack:hover {
+    background-color: #e4c064;
 }

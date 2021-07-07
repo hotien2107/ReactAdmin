@@ -27,7 +27,7 @@
     border-radius: 999px;
     width: 100%;
 }
-.Item.active, .Item:hover{
+.Item:hover{
     color: white;
     background-color: lightskyblue;
 }
@@ -35,4 +35,9 @@
 .Icon {
     margin-right: 5px;
     font-size: 20px !important;
+}
+
+.active {
+    color: white;
+    background-color: lightskyblue;
 }

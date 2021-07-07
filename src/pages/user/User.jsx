@@ -1,5 +1,6 @@
 import "./User.css"
-import { AccountBox, Event, PhoneAndroid, Email, Facebook , Publish} from "@material-ui/icons"
+import {Link} from "react-router-dom"
+import { AccountBox, Event, PhoneAndroid, Email, Facebook, Publish } from "@material-ui/icons"
 
 export default function User() {
     return (
@@ -89,14 +90,20 @@ export default function User() {
                         </div>
                         <div className="UserPageEditAvt">
                             <img src="https://phunugioi.com/wp-content/uploads/2020/10/anh-dai-dien-avt-anime-1.jpg" alt="" className="UpdateAvt" />
-                            <label htmlFor="file"><Publish className="IconPublic"/></label>
-                            <input type="file" name="file" id="file" style={{display: "none", opacity: 0}}/>
+                            <label htmlFor="file"><Publish className="IconPublic" /></label>
+                            <input type="file" name="file" id="file" style={{ display: "none", opacity: 0 }} />
                         </div>
-                        
+
                     </div>
                     <button className="BtnSaveEditUser">Save</button>
                 </div>
             </div>
+            <Link to="/Users">
+
+                <button className="UserPageBack">
+                    Back
+                </button>
+            </Link>
         </div>
     )
 }
