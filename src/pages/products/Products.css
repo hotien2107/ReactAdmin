@@ -1,0 +1,80 @@
+.Rackets {
+    flex: 5;
+    }
+.RacketsContainer {
+    height: 650px;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 8px -5px #333;
+
+}
+
+.RacketInfo {
+    display: flex;
+    align-items: center;
+}
+
+.RacketAvt {
+    width: 35px;
+    height: 35px;
+    border-radius: 999px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.RacketIcon {
+    display: flex;
+    align-items: center;
+}
+
+.RacketIconEdit{
+    background-color: #66a8de;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 32px !important;
+    cursor: pointer;
+}
+.RacketIconEdit:hover {
+    background-color: #3e8ccc;
+}
+
+.RacketIconDelete{
+    background-color: #F54748;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 32px !important;
+    cursor: pointer;
+}
+.RacketIconDelete:hover{
+    background-color: #db2323;
+}
+
+.RacketStatus {
+    line-height: 16px;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.RacketStatus.Active{
+    background-color: #d6fde5;
+    color: #3ecc75;
+}
+.RacketStatus.Inactive{
+    background-color: #ffd9d9;
+    color: #f73737;
+}
+.RacketsTitle {
+    font-weight: 700;
+    font-size: 36px;
+    margin: 20px 20px 20px 0;
+}
+
+.RacketsTable {
+    height: 85% !important;
+    
+}

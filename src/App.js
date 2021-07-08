@@ -6,6 +6,7 @@ import SideBar from "./components/SideBar/SideBar";
 import Home from "./pages/home/Home";
 import Users from "./pages/users/Users";
 import User from "./pages/user/User";
+import Products from "./pages/products/Products"
   
 import "./App.css";
 
@@ -29,6 +30,12 @@ function App() {
             <Route path="/User/:userId">
               <User />
             </Route>
+            <Route path="/Products">
+              <Products />
+            </Route>
+            
+
+
           </Switch>
         </div>
       </div>
