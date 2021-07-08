@@ -4,7 +4,7 @@ import { Search, DeleteForever } from "@material-ui/icons"
 import { RacketList } from "../../data/RacketList";
 import { Link } from "react-router-dom";
 
-export default function Rackets() {
+export default function Products() {
     const columns = [
         {
             field: 'id',
@@ -41,11 +41,11 @@ export default function Rackets() {
             headerName: 'Action',
             width: 160,
             renderCell: (params) => (
-                <div className="RacketIcon">
-                    <Link to={"/Racket/" + params.row.id} className="Link">
-                        <Search className="RacketIconEdit" />
+                <div className="ProductsIcon">
+                    <Link to={"/Product/" + params.row.id} className="Link">
+                        <Search className="ProductsIconEdit" />
                     </Link>
-                    <DeleteForever className="RacketIconDelete" />
+                    <DeleteForever className="ProductsIconDelete" />
                 </div>
             )
         },
@@ -53,18 +53,18 @@ export default function Rackets() {
 
 
     return (
-        <div className="Rackets">
-            <div className="RacketsContainer">
+        <div className="Products">
+            <div className="ProductsContainer">
 
-                <div className="RacketsTitle">
-                Rackets List
+                <div className="ProductsTitle">
+                Products List
                 </div>
                 <DataGrid
                     rows={ RacketList }
                     disableSelectionOnClick columns={columns}
                     pageSize={7}
                     checkboxSelection
-                    className="RacketsTable"
+                    className="ProductsTable"
                 />
             </div>
         </div>

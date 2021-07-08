@@ -1,7 +1,7 @@
-.Rackets {
+.Products {
     flex: 5;
     }
-.RacketsContainer {
+.ProductsContainer {
     height: 650px;
     margin: 20px;
     padding: 20px;
@@ -10,12 +10,12 @@
 
 }
 
-.RacketInfo {
+.ProductsInfo {
     display: flex;
     align-items: center;
 }
 
-.RacketAvt {
+.ProductsAvt {
     width: 35px;
     height: 35px;
     border-radius: 999px;
@@ -23,12 +23,12 @@
     margin-right: 10px;
 }
 
-.RacketIcon {
+.ProductsIcon {
     display: flex;
     align-items: center;
 }
 
-.RacketIconEdit{
+.ProductsIconEdit{
     background-color: #66a8de;
     color: white;
     padding: 5px;
@@ -37,11 +37,11 @@
     font-size: 32px !important;
     cursor: pointer;
 }
-.RacketIconEdit:hover {
+.ProductsIconEdit:hover {
     background-color: #3e8ccc;
 }
 
-.RacketIconDelete{
+.ProductsIconDelete{
     background-color: #F54748;
     color: white;
     padding: 5px;
@@ -50,31 +50,31 @@
     font-size: 32px !important;
     cursor: pointer;
 }
-.RacketIconDelete:hover{
+.ProductsIconDelete:hover{
     background-color: #db2323;
 }
 
-.RacketStatus {
+.ProductsStatus {
     line-height: 16px;
     border-radius: 10px;
     padding: 5px 10px;
 }
 
-.RacketStatus.Active{
+.ProductsStatus.Active{
     background-color: #d6fde5;
     color: #3ecc75;
 }
-.RacketStatus.Inactive{
+.ProductsStatus.Inactive{
     background-color: #ffd9d9;
     color: #f73737;
 }
-.RacketsTitle {
+.ProductsTitle {
     font-weight: 700;
     font-size: 36px;
     margin: 20px 20px 20px 0;
 }
 
-.RacketsTable {
+.ProductsTable {
     height: 85% !important;
     
 }

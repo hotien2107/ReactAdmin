@@ -5,3 +5,7 @@
 .Widget{
     display: flex;
 }
+
+.p20{
+    margin: 20px;
+}

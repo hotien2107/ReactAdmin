@@ -3,6 +3,8 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 
 
 export default function Chart(props) {
+    const DataKey = props.dataKey;
+ 
     return (
         <div className="Chart">
             <div className="ChartTitle">Revenue</div>
@@ -20,12 +22,15 @@ export default function Chart(props) {
                 >
                     <CartesianGrid strokeDasharray="5 5" />
                     <XAxis dataKey="name" />
-                    <YAxis/>
+                    <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Line type="monotone" dataKey="Mouse" stroke="#3C5186" />
-                    <Line type="monotone" dataKey="Keypad" stroke="#D62AD0" />
-          
+                    {
+                        DataKey.map((value, key) => (
+                            <Line key={key} type="monotone" dataKey={value} stroke={'#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0')} />
+                        ))
+                    }
+
                 </LineChart>
             </ResponsiveContainer>
         </div>

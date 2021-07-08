@@ -8,10 +8,13 @@ import WidgetSm from "../../components/Widget/Small/WidgetSm"
 
 
 export default function Home() {
+    const DataKey = ["Mouse", "Keypad"];
     return (
         <div className="Home">
             <Featured data={featuredData}/>
-            <Chart data={chartData}/>
+            <div className="p20">
+                <Chart data={chartData} dataKey={DataKey}/>
+            </div>
             <div className="Widget">
                 <WidgetSm/>
                 <WidgetLg/>

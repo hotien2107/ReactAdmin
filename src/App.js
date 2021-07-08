@@ -7,6 +7,7 @@ import Home from "./pages/home/Home";
 import Users from "./pages/users/Users";
 import User from "./pages/user/User";
 import Products from "./pages/products/Products"
+import Product from "./pages/product/Product"
   
 import "./App.css";
 
@@ -34,7 +35,9 @@ function App() {
               <Products />
             </Route>
             
-
+            <Route path="/Product/:userId">
+              <Product />
+            </Route>
 
           </Switch>
         </div>

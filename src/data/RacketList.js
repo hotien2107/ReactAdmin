@@ -1,5 +1,5 @@
 export const RacketList = [
-    { id: 1, racket: 'Snow',  amount: 12, price: '125$', brand: 'Yonex', transactions: 121.00 },
+    { id: 1, racket: 'Vợt cầu lông Yonex Astrox 100ZZ Kurenai - Đỏ New 2021',  amount: 12, price: '125$', brand: 'Yonex', transactions: 121.00 },
     { id: 2, racket: 'Lannister',  amount: 34, price: '125$', brand: 'Yonex', transactions: 120.00 },
     { id: 3, racket: 'Lannister',  amount: 54, price: '125$', brand: 'Lining', transactions: 120.00 },
     { id: 4, racket: 'Stark',  amount: 123, price: '125$', brand: 'Yonex', transactions: 120.00 },
