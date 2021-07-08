@@ -47,6 +47,7 @@
   object-fit: cover;
   margin-bottom: 20px;
   box-shadow: 0px 0px 11px 0px #333;
+  cursor: pointer;
 }
 
 .ProductPageInfoName {
@@ -166,7 +167,6 @@
 .ProductPageBack {
   font-size: 18px;
   margin: 20px;
-
   padding: 7px 20px;
   border: none;
   background-color: #fad577;
@@ -181,4 +181,85 @@
 
 .ProductPageAnalytics {
   flex: 2;
+}
+
+.ProductPageComments {
+    background-color: white;
+    box-shadow: 0px 0px 8px -5px #333;
+    padding: 20px;
+}
+
+.ProductPageCommentsTitle {
+    margin: 20px 0;
+    font-weight: 600;
+    color: #777;
+}
+
+.ProductPageCommentsItem {
+ margin-bottom: 20px;
+}
+
+.CommentsItemInfo {
+    display: flex;
+}
+
+.CommentsItemInfoAvt {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.CommentsItemInfoNameAndDay {
+    display: flex;
+    flex-direction: column;
+}
+
+.CommentsItemInfoName {
+    font-weight: 600;
+    color: #333;
+}
+
+.CommentsItemInfoDay {
+    font-weight: 300;
+    color: #555;
+}
+
+.CommentsItemContent {
+    margin: 10px 0 0 10px;
+    width: 95%;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px #aaa;
+    padding: 10px;
+    border-radius: 0 10px 0 10px;
+}
+
+.ZoomImgBox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0.685);
+    z-index: 999;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.ZoomImg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90vh;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+.show {
+    visibility: visible;
+    opacity: 1;
 }

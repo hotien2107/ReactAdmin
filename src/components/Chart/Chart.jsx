@@ -7,7 +7,7 @@ export default function Chart(props) {
  
     return (
         <div className="Chart">
-            <div className="ChartTitle">Revenue</div>
+            <div className="ChartTitle">{props.title}</div>
             <ResponsiveContainer width="100%" aspect={4 / 1}>
                 <LineChart
                     width={500}

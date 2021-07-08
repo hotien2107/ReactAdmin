@@ -2,9 +2,24 @@ import "./Product.css"
 import { Link } from "react-router-dom"
 import Chart from "../../components/Chart/Chart"
 import { RacketAnalytics } from "../../data/RacketAnalytics"
+import { useState } from "react"
 
 export default function Product() {
-    const dataKey =["Transactions"];
+    const dataKeyTransactions = ["Transactions"];
+    const dataKeyAmount = ["Amount"];
+    const dataKeyRatting = ["Ratting"];
+
+    let zoomStatus = "hide";
+    const [ZoomStatus, setZoomStatus] = useState(zoomStatus);
+
+    const ZoomIn = () => {
+        setZoomStatus("show");
+    }
+
+    const ZoomOut = () => {
+        setZoomStatus("hide");
+    }
+
     return (
         <div className="ProductPage">
             <div className="ProductPageTitleContainer">
@@ -20,7 +35,7 @@ export default function Product() {
 
                 <div className="ProductPageInfo">
                     <div className="ProductPageInfoBasic">
-                        <img src="https://pbs.twimg.com/media/E1ueLb8VkAAQbVS.jpg" alt="" className="ProductPageInfoImg" />
+                        <img src="https://pbs.twimg.com/media/E1ueLb8VkAAQbVS.jpg" alt="" className="ProductPageInfoImg" onClick={ZoomIn}/>
                         <div className="ProductPageInfoNameAndBrand">
                             <div className="ProductPageInfoName">Vợt cầu lông Yonex Astrox 100ZZ Kurenai - Đỏ New 2021</div>
                             <div className="ProductPageInfoBrand">
@@ -84,12 +99,50 @@ export default function Product() {
                 </div>
 
                 <div className="ProductPageAnalytics">
-                    
-                        <Chart data={RacketAnalytics} dataKey={dataKey} />
-                        
-                        
+
+                    <Chart data={RacketAnalytics} dataKey={dataKeyTransactions} title="Transactions" />
+                    <br />
+                    <Chart data={RacketAnalytics} dataKey={dataKeyAmount} title="Amount" />
+                    <br />
+                    <Chart data={RacketAnalytics} dataKey={dataKeyRatting} title="Ratting" />
+                    <br />
+                    <div className="ProductPageComments">
+                        <div className="ProductPageCommentsTitle">Comments</div>
+                        <div className="ProductPageCommentsItem">
+                            <div className="CommentsItemInfo">
+                                <img src="https://phunugioi.com/wp-content/uploads/2020/10/anh-dai-dien-avt-anime-1.jpg" alt="" className="CommentsItemInfoAvt" />
+                                <div className="CommentsItemInfoNameAndDay">
+                                    <div className="CommentsItemInfoName">Hồ Hoàng Việt Tiến</div>
+                                    <div className="CommentsItemInfoDay">July 8, 2021</div>
+                                </div>
+                            </div>
+                            <div className="CommentsItemContent">Good racket!!</div>
+                        </div>
+                        <div className="ProductPageCommentsItem">
+                            <div className="CommentsItemInfo">
+                                <img src="https://phunugioi.com/wp-content/uploads/2020/10/anh-dai-dien-avt-anime-1.jpg" alt="" className="CommentsItemInfoAvt" />
+                                <div className="CommentsItemInfoNameAndDay">
+                                    <div className="CommentsItemInfoName">Hồ Hoàng Việt Tiến</div>
+                                    <div className="CommentsItemInfoDay">July 8, 2021</div>
+                                </div>
+                            </div>
+                            <div className="CommentsItemContent">Awesome!!</div>
+                        </div>
+                        <div className="ProductPageCommentsItem">
+                            <div className="CommentsItemInfo">
+                                <img src="https://phunugioi.com/wp-content/uploads/2020/10/anh-dai-dien-avt-anime-1.jpg" alt="" className="CommentsItemInfoAvt" />
+                                <div className="CommentsItemInfoNameAndDay">
+                                    <div className="CommentsItemInfoName">Hồ Hoàng Việt Tiến</div>
+                                    <div className="CommentsItemInfoDay">July 8, 2021</div>
+                                </div>
+                            </div>
+                            <div className="CommentsItemContent">I will buy again ^^</div>
+                        </div>
+                    </div>
+
                 </div>
-                
+
+
                 {/* <div className="ProductPageEdit">
                     <div className="ProductPageEditTitle">Edit</div>
                     <div className="ProductPageEditContainer">
@@ -136,6 +189,10 @@ export default function Product() {
                     </div>
                     <button className="BtnSaveEditProduct">Save</button>
                 </div> */}
+            </div>
+            <div className={"ZoomImgBox " + ZoomStatus} onClick={ZoomOut}>
+                <img src="https://pbs.twimg.com/media/E1ueLb8VkAAQbVS.jpg" alt="" className="ZoomImg" />
+
             </div>
         </div>
     )

@@ -13,7 +13,7 @@ export default function Home() {
         <div className="Home">
             <Featured data={featuredData}/>
             <div className="p20">
-                <Chart data={chartData} dataKey={DataKey}/>
+                <Chart data={chartData} dataKey={DataKey} title="Revenue"/>
             </div>
             <div className="Widget">
                 <WidgetSm/>
