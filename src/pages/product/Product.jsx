@@ -1,6 +1,6 @@
 import "./Product.css"
 import { Link } from "react-router-dom"
-import Chart from "../../components/Chart/Chart"
+import BasicCharts from "../../components/Chart/BasicCharts"
 import { RacketAnalytics } from "../../data/RacketAnalytics"
 import { useState } from "react"
 import {ArrowBackIos} from "@material-ui/icons"
@@ -25,7 +25,7 @@ export default function Product() {
         <div className="ProductPage">
             <div className="ProductPageTitleContainer">
                 <div className="ProductPageTitle">Racket Information</div>
-                <Link to="/Products">
+                <Link to="/Products" className="Link">
 
                     <button className="ProductPageBack">
                     <ArrowBackIos style={{ fontSize: 16 }}/>
@@ -102,11 +102,11 @@ export default function Product() {
 
                 <div className="ProductPageAnalytics">
 
-                    <Chart data={RacketAnalytics} dataKey={dataKeyTransactions} title="Transactions" />
+                    <BasicCharts data={RacketAnalytics} dataKey={dataKeyTransactions} title="Transactions" />
                     <br />
-                    <Chart data={RacketAnalytics} dataKey={dataKeyAmount} title="Amount" />
+                    <BasicCharts data={RacketAnalytics} dataKey={dataKeyAmount} title="Amount" />
                     <br />
-                    <Chart data={RacketAnalytics} dataKey={dataKeyRatting} title="Ratting" />
+                    <BasicCharts data={RacketAnalytics} dataKey={dataKeyRatting} title="Ratting" />
                     <br />
                     <div className="ProductPageComments">
                         <div className="ProductPageCommentsTitle">Comments</div>

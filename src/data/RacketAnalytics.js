@@ -1,26 +1,26 @@
 export const RacketAnalytics = [
     {
-        name: 'Jan',
+        month: 'Jan',
         Amount: 12,
-        Transactions: 2800,
+        Transactions: 28200,
         Ratting: 9.5,
     },
     {
-        name: 'Feb',
+        month: 'Feb',
         Amount: 25,
-        Transactions: 2210,
+        Transactions: 22410,
         Ratting: 9.8,
     },
     {
-        name: 'Mar',
+        month: 'Mar',
         Amount: 8,
-        Transactions: 4790,
+        Transactions: 44790,
         Ratting: 9.5,
     },
     {
-        name: 'Apr',
+        month: 'Apr',
         Amount: 15,
-        Transactions: 3590,
+        Transactions: 35690,
         Ratting: 9,
     },
 ];

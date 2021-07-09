@@ -173,6 +173,8 @@
   border-radius: 5px;
   color: white;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .ProductPageBack:hover {

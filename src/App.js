@@ -8,7 +8,8 @@ import Users from "./pages/users/Users";
 import User from "./pages/user/User";
 import Products from "./pages/products/Products"
 import Product from "./pages/product/Product"
-  
+import Analytics from "./pages/analytics/Analytics";
+
 import "./App.css";
 
 function App() {
@@ -37,6 +38,10 @@ function App() {
             
             <Route path="/Product/:userId">
               <Product />
+            </Route>
+
+            <Route path="/Analytics">
+              <Analytics />
             </Route>
 
           </Switch>

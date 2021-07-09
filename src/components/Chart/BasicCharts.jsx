@@ -2,7 +2,7 @@ import "./Chart.css"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 
-export default function Chart(props) {
+export default function BasicCharts(props) {
     const DataKey = props.dataKey;
  
     return (
@@ -21,7 +21,7 @@ export default function Chart(props) {
                     }}
                 >
                     <CartesianGrid strokeDasharray="5 5" />
-                    <XAxis dataKey="name" />
+                    <XAxis dataKey="month" />
                     <YAxis />
                     <Tooltip />
                     <Legend />
