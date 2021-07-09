@@ -15,12 +15,12 @@ const Menu = [
             {
                 SideBarItemName:"Analytics",
                 SideBarItemIcon: Poll,
-                status: "inactive"
+                
             },
             {
                 SideBarItemName:"Hot",
                 SideBarItemIcon: Whatshot,
-                status: "inactive"
+                
             },
         ],
 
@@ -31,17 +31,17 @@ const Menu = [
             {
                 SideBarItemName:"Users",
                 SideBarItemIcon: AssignmentInd,
-                status: "inactive"
+                
             },
             {
                 SideBarItemName:"Products",
                 SideBarItemIcon: ShoppingBasket,
-                status: "inactive"
+                
             },
             {
                 SideBarItemName:"Transactions",
                 SideBarItemIcon: MonetizationOn,
-                status: "inactive"
+                
             },
         ],
 
@@ -52,17 +52,17 @@ const Menu = [
             {
                 SideBarItemName:"Mail",
                 SideBarItemIcon: Mail,
-                status: "inactive"
+                
             },
             {
                 SideBarItemName:"Feedback",
                 SideBarItemIcon: Feedback,
-                status: "inactive"
+                
             },
             {
                 SideBarItemName:"Message",
                 SideBarItemIcon: Message,
-                status: "inactive"
+                
             },
         ],
 
@@ -73,7 +73,7 @@ const Menu = [
             {
                 SideBarItemName:"Manager",
                 SideBarItemIcon: Assignment,
-                status: "inactive"
+                
             },
         ],
 
@@ -84,7 +84,7 @@ const Menu = [
             {
                 SideBarItemName:"Information",
                 SideBarItemIcon: Person,
-                status: "inactive"
+                
             },
         ],
 

@@ -1,6 +1,6 @@
 import "./User.css"
 import {Link} from "react-router-dom"
-import { AccountBox, Event, PhoneAndroid, Email, Facebook, Publish } from "@material-ui/icons"
+import { AccountBox, Event, PhoneAndroid, Email, Facebook, Publish, ArrowBackIos } from "@material-ui/icons"
 import { useState } from "react";
 
 export default function User() {
@@ -109,9 +109,10 @@ export default function User() {
                     <button className="BtnSaveEditUser">Save</button>
                 </div>
             </div>
-            <Link to="/Users">
+            <Link to="/Users" className="Link">
 
                 <button className="UserPageBack">
+                    <ArrowBackIos style={{ fontSize: 16 }}/>
                     Back
                 </button>
             </Link>

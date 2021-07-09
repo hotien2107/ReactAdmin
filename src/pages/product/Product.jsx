@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import Chart from "../../components/Chart/Chart"
 import { RacketAnalytics } from "../../data/RacketAnalytics"
 import { useState } from "react"
+import {ArrowBackIos} from "@material-ui/icons"
 
 export default function Product() {
     const dataKeyTransactions = ["Transactions"];
@@ -27,6 +28,7 @@ export default function Product() {
                 <Link to="/Products">
 
                     <button className="ProductPageBack">
+                    <ArrowBackIos style={{ fontSize: 16 }}/>
                         Back
                     </button>
                 </Link>

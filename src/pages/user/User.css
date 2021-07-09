@@ -1,5 +1,5 @@
 * {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,15 +10,15 @@
 }
 
 .UserPageTitle {
-    font-weight: 700;
-    font-size: 36px;
-    margin: 20px 0 40px 20px;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 20px 0 40px 20px;
 }
 
 .UserPageContainer {
-    display: flex;
-    height: max-content;
-    padding: 20px;
+  display: flex;
+  height: max-content;
+  padding: 20px;
 }
 
 .UserPageInfo {
@@ -63,16 +63,16 @@
 }
 
 .UserPageInfoDetailItem {
-    display: flex;
-    align-items: center;
-    color: #333;
-    margin: 20px 0;
-    font-weight: 300;
+  display: flex;
+  align-items: center;
+  color: #333;
+  margin: 20px 0;
+  font-weight: 300;
 }
 
-.UserPageInfoDetailItem .Icon{
-    margin: 0 10px;
-    color: #555;
+.UserPageInfoDetailItem .Icon {
+  margin: 0 10px;
+  color: #555;
 }
 
 .UserPageEdit {
@@ -82,91 +82,90 @@
   height: 100%;
 }
 
-
 .UserPageEditTitle {
-    font-size: 28px;
-    font-weight: 600;
-    margin: 10px;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 10px;
 }
 
 .UserPageEditContainer {
-    padding: 20px;
-    display: flex;
+  padding: 20px;
+  display: flex;
 }
 
-
 .UserPageEditText {
-    flex: 1;
+  flex: 1;
 }
 
 .UserPageEditTextLabel {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .UserPageEditTextItemTitle {
-    font-size: 16px;
-    font-weight: 600;
-    margin: 5px 0;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 5px 0;
 }
 
 .UserPageEditTextItemInput {
-    border: none;
-    width: 100%;
-    border-bottom: 1px solid gray;
-    color: #333;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  color: #333;
 }
 
 .UserPageEditTextItemInput::placeholder {
-    color: rgb(212, 212, 212);
+  color: rgb(212, 212, 212);
 }
 
 .UserPageEditAvt {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .UpdateAvt {
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-    object-fit: cover;
-    margin-bottom: 20px;
-    cursor: pointer;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .IconPublic {
-    cursor: pointer;
-    color: #333;
+  cursor: pointer;
+  color: #333;
 }
 
 .BtnSaveEditUser {
-    margin: 0 20px 20px 20px;
-    padding: 7px 20px;
-    border: none;
-    background-color: #2dc467;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
+  margin: 0 20px 20px 20px;
+  padding: 7px 20px;
+  border: none;
+  background-color: #2dc467;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
 }
 .BtnSaveEditUser:hover {
-    background-color: #11aa4c;
+  background-color: #11aa4c;
 }
 
 .UserPageBack {
-    font-size: 18px;
-    margin: 20px 0 40px 20px;
-
-    padding: 7px 20px;
-    border: none;
-    background-color: #fad577;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin: 20px 0 40px 20px;
+  padding: 7px 20px;
+  border: none;
+  background-color: #fad577;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
 }
 
 .UserPageBack:hover {
-    background-color: #e4c064;
+  background-color: #e4c064;
 }

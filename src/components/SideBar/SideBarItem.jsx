@@ -14,10 +14,20 @@ export default function SideBarItem(props) {
     const splitLocation = pathname.split("/");
 
     const Icon = props.SideBarItemIcon;
-    let status = splitLocation[1] === props.SideBarItemName ? "active" : "";
-
-    return (
-        <Link to={"/" + props.SideBarItemName} className="Link ">
+    let status = "";
+    if (splitLocation[1] === "") {
+        if (props.SideBarItemName === "Home"){
+            status = "active";
+        } else { 
+            status = "";
+        }
+    } else if (props.SideBarItemName.indexOf(splitLocation[1]) >= 0) {
+        status = "active";
+    } else {
+        status = "";
+    }
+    return ( 
+        <Link to={"/" + props.SideBarItemName} className="Link">
             <li className={"Item " + status}>
                 <Icon className="Icon" />
                 {props.SideBarItemName}
