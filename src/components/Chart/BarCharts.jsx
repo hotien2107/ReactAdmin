@@ -6,7 +6,7 @@ export default function BarCharts(props) {
     return (
         <div className="Chart">
             <div className="ChartTitle">{props.title}</div>
-            <ResponsiveContainer width="100%" aspect={4 / 2}>
+            <ResponsiveContainer width="99%" aspect={4 / 2}>
                 <BarChart
                     width={500}
                     height={300}

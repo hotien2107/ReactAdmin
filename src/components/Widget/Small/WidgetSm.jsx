@@ -1,9 +1,9 @@
 import "./WidgetSm.css"
 import {Visibility} from "@material-ui/icons"
 
-export default function WidgetSm() {
+export default function WidgetSm(props) {
     return (
-        <div className="WidgetSm">
+        <div className={"WidgetSm " + props.addClassName }>
             <span className="WidgetSmTitle">New Join Member</span>
 
             <div className="WidgetSmMember">

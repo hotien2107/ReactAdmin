@@ -6,9 +6,10 @@ import SideBar from "./components/SideBar/SideBar";
 import Home from "./pages/home/Home";
 import Users from "./pages/users/Users";
 import User from "./pages/user/User";
-import Products from "./pages/products/Products"
-import Product from "./pages/product/Product"
+import Products from "./pages/products/Products";
+import Product from "./pages/product/Product";
 import Analytics from "./pages/analytics/Analytics";
+import Hot from "./pages/hot/Hot";
 
 import "./App.css";
 
@@ -19,29 +20,39 @@ function App() {
         <TopBar />
         <div className="container">
           <SideBar />
+
           <Switch>
+            
             <Route exact path="/">
               <Home />
             </Route>
+
             <Route path="/Home">
               <Home />
             </Route>
+
             <Route path="/Users">
               <Users />
             </Route>
+
             <Route path="/User/:userId">
               <User />
             </Route>
+
             <Route path="/Products">
               <Products />
             </Route>
-            
+
             <Route path="/Product/:userId">
               <Product />
             </Route>
 
             <Route path="/Analytics">
               <Analytics />
+            </Route>
+
+            <Route path="/Hot">
+              <Hot />
             </Route>
 
           </Switch>

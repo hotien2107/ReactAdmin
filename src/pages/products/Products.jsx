@@ -9,36 +9,43 @@ export default function Products() {
         {
             field: 'id',
             headerName: 'ID',
+            resizable: true,
             width: 90
         },
         {
             field: 'racket',
             headerName: 'Racket name',
-            width: 250
+            resizable: true,
+            width: 300
         },
         {
             field: 'amount',
             headerName: 'Amount',
+            resizable: true,
             width: 130
         },
         {
             field: 'price',
             headerName: 'Price',
+            resizable: true,
             width: 120
         },
         {
             field: 'brand',
             headerName: 'Brand',
+            resizable: true,
             width: 150,
         },
         {
             field: 'transactions',
             headerName: 'Transactions',
+            resizable: true,
             width: 160
         },
         {
             field: 'action',
             headerName: 'Action',
+            resizable: true,
             width: 160,
             renderCell: (params) => (
                 <div className="ProductsIcon">

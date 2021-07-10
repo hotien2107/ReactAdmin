@@ -1,26 +1,27 @@
-import { Dashboard, Poll, Assignment, Whatshot, AssignmentInd, ShoppingBasket, MonetizationOn, Mail, Feedback, Message, Person } from "@material-ui/icons"
+import { Dashboard, Poll, Assignment, Whatshot, AssignmentInd, ShoppingBasket, MonetizationOn, Mail, Feedback, Message, Person, MenuOpen, Menu } from "@material-ui/icons"
 import './SideBar.css'
 import SideBarMenu from './SideBarMenu'
+import { useState } from "react";
 
 
-const Menu = [
+const menu = [
     {
         SideBarMenuName: "Dashboard",
         SideBarItem: [
             {
-                SideBarItemName:"Home",
+                SideBarItemName: "Home",
                 SideBarItemIcon: Dashboard,
                 status: "active"
             },
             {
-                SideBarItemName:"Analytics",
+                SideBarItemName: "Analytics",
                 SideBarItemIcon: Poll,
-                
+
             },
             {
-                SideBarItemName:"Hot",
+                SideBarItemName: "Hot",
                 SideBarItemIcon: Whatshot,
-                
+
             },
         ],
 
@@ -29,19 +30,19 @@ const Menu = [
         SideBarMenuName: "Quick Menu",
         SideBarItem: [
             {
-                SideBarItemName:"Users",
+                SideBarItemName: "Users",
                 SideBarItemIcon: AssignmentInd,
-                
+
             },
             {
-                SideBarItemName:"Products",
+                SideBarItemName: "Products",
                 SideBarItemIcon: ShoppingBasket,
-                
+
             },
             {
-                SideBarItemName:"Transactions",
+                SideBarItemName: "Transactions",
                 SideBarItemIcon: MonetizationOn,
-                
+
             },
         ],
 
@@ -50,19 +51,19 @@ const Menu = [
         SideBarMenuName: "Notifications",
         SideBarItem: [
             {
-                SideBarItemName:"Mail",
+                SideBarItemName: "Mail",
                 SideBarItemIcon: Mail,
-                
+
             },
             {
-                SideBarItemName:"Feedback",
+                SideBarItemName: "Feedback",
                 SideBarItemIcon: Feedback,
-                
+
             },
             {
-                SideBarItemName:"Message",
+                SideBarItemName: "Message",
                 SideBarItemIcon: Message,
-                
+
             },
         ],
 
@@ -71,9 +72,9 @@ const Menu = [
         SideBarMenuName: "Staff",
         SideBarItem: [
             {
-                SideBarItemName:"Manager",
+                SideBarItemName: "Manager",
                 SideBarItemIcon: Assignment,
-                
+
             },
         ],
 
@@ -82,32 +83,53 @@ const Menu = [
         SideBarMenuName: "Personal Information",
         SideBarItem: [
             {
-                SideBarItemName:"Information",
+                SideBarItemName: "Information",
                 SideBarItemIcon: Person,
-                
+
             },
         ],
 
     },
 ];
 
+let Status = "Show";
+
+
 export default function SideBar() {
-    
+
+    const [status, setStatus] = useState(Status);
+
+    const changeMenuStatus = () => {
+        if (status === "Hide") {
+            setStatus("Show");
+        } else {
+            setStatus("Hide");
+        }
+    }
+
+
     return (
-        <div className="SideBar">
-            
+        <div className={"SideBar " + status}>
+            <div className="MenuIcon">
+                <MenuOpen className="IconInOut" onClick={changeMenuStatus} />
+
+            </div>
             <div className="SideBarWrapper">
-                {Menu.map((value, key) => (
-                    <SideBarMenu 
-                    key={key}
-                    SideBarMenuName={value.SideBarMenuName}
-                    SideBarItem={value.SideBarItem}
-                    status={value.status}
-                    />
-                ))}
+                {
+                    menu.map((value, key) => (
+                        <SideBarMenu
+                            key={key}
+                            SideBarMenuName={value.SideBarMenuName}
+                            SideBarItem={value.SideBarItem}
+                            statusMenu={status}
+                        />
+                    ))
+                }
 
             </div>
 
         </div>
     )
+
+
 }

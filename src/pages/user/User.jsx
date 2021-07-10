@@ -1,5 +1,5 @@
 import "./User.css"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import { AccountBox, Event, PhoneAndroid, Email, Facebook, Publish, ArrowBackIos } from "@material-ui/icons"
 import { useState } from "react";
 
@@ -16,7 +16,16 @@ export default function User() {
     }
     return (
         <div className="UserPage">
-            <div className="UserPageTitle">Edit User</div>
+            <div className="UserPageTitleAndBack">
+                <div className="UserPageTitle">Edit User</div>
+                <Link to="/Users" className="Link">
+
+                    <button className="UserPageBack">
+                        <ArrowBackIos style={{ fontSize: 16 }} />
+                        Back
+                    </button>
+                </Link>
+            </div>
             <div className="UserPageContainer">
 
                 <div className="UserPageInfo">
@@ -100,7 +109,7 @@ export default function User() {
 
                         </div>
                         <div className="UserPageEditAvt">
-                            <img src="https://phunugioi.com/wp-content/uploads/2020/10/anh-dai-dien-avt-anime-1.jpg" alt="" className="UpdateAvt" onClick={ZoomIn}/>
+                            <img src="https://phunugioi.com/wp-content/uploads/2020/10/anh-dai-dien-avt-anime-1.jpg" alt="" className="UpdateAvt" onClick={ZoomIn} />
                             <label htmlFor="file"><Publish className="IconPublic" /></label>
                             <input type="file" name="file" id="file" style={{ display: "none", opacity: 0 }} />
                         </div>
@@ -109,13 +118,7 @@ export default function User() {
                     <button className="BtnSaveEditUser">Save</button>
                 </div>
             </div>
-            <Link to="/Users" className="Link">
 
-                <button className="UserPageBack">
-                    <ArrowBackIos style={{ fontSize: 16 }}/>
-                    Back
-                </button>
-            </Link>
             <div className={"ZoomImgBox " + ZoomStatus} onClick={ZoomOut}>
                 <img src="https://phunugioi.com/wp-content/uploads/2020/10/anh-dai-dien-avt-anime-1.jpg" alt="" className="ZoomImg" />
 

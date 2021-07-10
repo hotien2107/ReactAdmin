@@ -1,0 +1,79 @@
+.Hot {
+  flex: 5 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.HotTitle {
+  font-weight: 700;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.HotContainer {
+  display: flex;
+}
+.HotItem {
+    flex: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px -5px #333;
+  height: max-content;
+}
+
+.HotItemTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin: 20px;
+}
+
+.HotTable {
+  width: 100%;
+  border-spacing: 20px;
+}
+
+.HotTr {
+  text-align: left;
+}
+.HotTh {
+  margin: 10px 0;
+}
+
+.HotUser {
+  display: flex;
+  align-items: center;
+}
+
+.HotAvt {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.HotUserName,
+.HotDate,
+.HotAmount {
+  font-weight: normal;
+}
+
+.HotButton {
+  padding: 7px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.HotButton.Done {
+  background-color: #e4f8e5;
+  color: #61b15a;
+}
+.HotButton.Declined {
+  background-color: #fde0e0;
+  color: #d83a56;
+}
+.HotButton.Pending {
+  background-color: #e0ffff;
+  color: #39a2db;
+}

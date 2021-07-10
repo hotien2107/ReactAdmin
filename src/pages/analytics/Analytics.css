@@ -1,21 +1,21 @@
 .Analytics {
     flex: 5;
     display: flex;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .AnalyticsBrandsAndRacket {
     flex: 1;
-    margin: 20px 10px 20px 20px;
 }
 
 .AnalyticsUsers {
     flex: 1;
-    margin: 20px 20px 20px 10px;
 }
 
 .AnalyticsTitle {
     font-weight: 700;
     font-size: 36px;
-    margin: 20px 20px 20px 0;
     color: #333;
+    margin-bottom: 20px;
 }

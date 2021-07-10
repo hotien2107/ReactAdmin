@@ -26,12 +26,23 @@ export default function SideBarItem(props) {
     } else {
         status = "";
     }
-    return ( 
-        <Link to={"/" + props.SideBarItemName} className="Link">
-            <li className={"Item " + status}>
-                <Icon className="Icon" />
-                {props.SideBarItemName}
-            </li>
-        </Link>
-    )
+    
+    if (props.statusMenu === "Show") {
+        return ( 
+            <Link to={"/" + props.SideBarItemName} className="Link">
+                <li className={"Item " + status}>
+                    <Icon className="Icon mr5" />
+                    {props.SideBarItemName}
+                </li>
+            </Link>
+        )
+    } else {
+        return ( 
+            <Link to={"/" + props.SideBarItemName} className="Link">
+                <li className={"Item " + status}>
+                    <Icon className="Icon" />
+                </li>
+            </Link>
+        )
+    }
 }

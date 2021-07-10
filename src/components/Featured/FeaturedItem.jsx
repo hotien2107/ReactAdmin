@@ -5,7 +5,7 @@ export default function Home(props) {
     const ratting = props.ratting;
     if (ratting >= 0){
         return (
-            <div className="FeaturedItem">
+            <div className={"FeaturedItem " + props.addClassName}>
                 <span className="FeaturedTitle">{props.title}</span>
                 <div className="FeaturedInf">
                     <span className="FeaturedPrice">
@@ -22,7 +22,7 @@ export default function Home(props) {
         )
     }
     return (
-        <div className="FeaturedItem">
+        <div className={"FeaturedItem " + props.addClassName}>
             <span className="FeaturedTitle">{props.title}</span>
             <div className="FeaturedInf">
                 <span className="FeaturedPrice">

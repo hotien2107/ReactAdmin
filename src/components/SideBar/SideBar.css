@@ -1,11 +1,30 @@
 .SideBar {
-    flex: 1;
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(250, 250, 250, 0.8);
     padding: 20px;
     position: sticky;
     top: 75px;
     height: calc(100vh - 75px);
 }
+.SideBar.Show {
+    flex: 1 1;
+    transition: 0.4s;
+}
+.SideBar.Hide {
+    flex: 0 1;
+    transition: 0.4s;
+}
+
+.MenuIcon {
+    display: flex;
+    justify-content: center;
+}
+.IconInOut {
+    font-size: 30px !important;
+    color: #333;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
 
 .Title {
     color: #aaa;
@@ -33,11 +52,14 @@
 }
 
 .Icon {
-    margin-right: 5px;
     font-size: 20px !important;
 }
 
 .active {
     color: white;
     background-color: lightskyblue;
+}
+
+.mr5{
+    margin-right: 5px;
 }

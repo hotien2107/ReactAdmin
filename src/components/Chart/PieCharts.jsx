@@ -26,7 +26,7 @@ export default function PieCharts(props) {
     return (
         <div className="Chart">
             <div className="ChartTitle">{props.title}</div>
-            <ResponsiveContainer width="100%" height="100%" aspect={5 / 2}>
+            <ResponsiveContainer width="99%" aspect={5 / 2}>
                 <PieChart width={600} height={600}>
                     <Pie
                         data={brandsData}

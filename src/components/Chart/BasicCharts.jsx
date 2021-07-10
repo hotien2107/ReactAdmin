@@ -8,7 +8,7 @@ export default function BasicCharts(props) {
     return (
         <div className="Chart">
             <div className="ChartTitle">{props.title}</div>
-            <ResponsiveContainer width="100%" aspect={4 / 1}>
+            <ResponsiveContainer width="99%" aspect={4 / 1}>
                 <LineChart
                     width={500}
                     height={300}
@@ -20,9 +20,9 @@ export default function BasicCharts(props) {
                         bottom: 5,
                     }}
                 >
-                    <CartesianGrid strokeDasharray="5 5" />
-                    <XAxis dataKey="month" />
-                    <YAxis />
+                    <CartesianGrid strokeDasharray="5 5" stroke="#333333fa"/>
+                    <XAxis dataKey="month" stroke="#333"/>
+                    <YAxis stroke="#333"/>
                     <Tooltip />
                     <Legend />
                     {

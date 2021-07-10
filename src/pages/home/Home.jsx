@@ -11,13 +11,17 @@ export default function Home() {
     const DataKey = ["Racket", "String"];
     return (
         <div className="Home">
-            <Featured data={featuredData}/>
-            <div className="p20">
-                <BasicCharts data={chartData} dataKey={DataKey} title="Revenue"/>
-            </div>
+            <div className="HomeTitle">Dashboard</div>
+            <Featured data={featuredData} />
+            <br/>
+            <BasicCharts data={chartData} dataKey={DataKey} title="Revenue" />
+            <br/>
             <div className="Widget">
-                <WidgetSm/>
-                <WidgetLg/>
+
+                <WidgetSm addClassName="mr20"/>
+                
+                <WidgetLg title="Latest transactions"/>
+
             </div>
         </div>
     )
