@@ -4,6 +4,7 @@ import CustomShapeBarChart from "../../components/Chart/CustomShapeBarChart"
 import { RacketAnalytics } from "../../data/RacketAnalytics"
 import BarCharts from "../../components/Chart/BarCharts";
 import WidgetLg from "../../components/Widget/Large/WidgetLg";
+import { staffData } from "../../data/ChartData";
 
 
 export default function Analytics() {
@@ -19,7 +20,7 @@ export default function Analytics() {
             <div className="AnalyticsUsers ml20">
                 <div className="AnalyticsTitle">Staff and Users</div>
 
-                <CustomShapeBarChart title="Staff Chart" dataKeyXAxis="name" dataKeyBar="sales" />
+                <CustomShapeBarChart data={staffData} title="Staff Chart" dataKeyXAxis="name" dataKeyBar="sales" />
                 <br />
                 <WidgetLg />
             </div>

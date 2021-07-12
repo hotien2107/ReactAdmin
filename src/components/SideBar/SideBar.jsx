@@ -69,10 +69,10 @@ const menu = [
 
     },
     {
-        SideBarMenuName: "Staff",
+        SideBarMenuName: "Manager",
         SideBarItem: [
             {
-                SideBarItemName: "Manager",
+                SideBarItemName: "Staffs",
                 SideBarItemIcon: Assignment,
 
             },
@@ -92,7 +92,7 @@ const menu = [
     },
 ];
 
-let Status = "Show";
+let Status = "Hide";
 
 
 export default function SideBar() {
@@ -107,29 +107,54 @@ export default function SideBar() {
         }
     }
 
-
-    return (
-        <div className={"SideBar " + status}>
-            <div className="MenuIcon">
-                <MenuOpen className="IconInOut" onClick={changeMenuStatus} />
-
+    if (status === "Show") {
+        return (
+            <div className={"SideBar " + status}>
+                <div className="MenuIcon">
+                    <MenuOpen className="IconInOut" onClick={changeMenuStatus} />
+    
+                </div>
+                <div className="SideBarWrapper">
+                    {
+                        menu.map((value, key) => (
+                            <SideBarMenu
+                                key={key}
+                                SideBarMenuName={value.SideBarMenuName}
+                                SideBarItem={value.SideBarItem}
+                                statusMenu={status}
+                            />
+                        ))
+                    }
+    
+                </div>
+    
             </div>
-            <div className="SideBarWrapper">
-                {
-                    menu.map((value, key) => (
-                        <SideBarMenu
-                            key={key}
-                            SideBarMenuName={value.SideBarMenuName}
-                            SideBarItem={value.SideBarItem}
-                            statusMenu={status}
-                        />
-                    ))
-                }
-
+        )
+    } else {
+        return (
+            <div className={"SideBar " + status}>
+                <div className="MenuIcon">
+                    <Menu className="IconInOut" onClick={changeMenuStatus} />
+    
+                </div>
+                <div className="SideBarWrapper">
+                    {
+                        menu.map((value, key) => (
+                            <SideBarMenu
+                                key={key}
+                                SideBarMenuName={value.SideBarMenuName}
+                                SideBarItem={value.SideBarItem}
+                                statusMenu={status}
+                            />
+                        ))
+                    }
+    
+                </div>
+    
             </div>
-
-        </div>
-    )
+        )
+    }
+    
 
 
 }

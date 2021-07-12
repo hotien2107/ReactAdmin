@@ -1,0 +1,190 @@
+* {
+    font-family: "Source Sans Pro", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #ffff00;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ff8000'/%3E%3Cstop offset='1' stop-color='%23ff8000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2300ff19'/%3E%3Cstop offset='1' stop-color='%2300ff19' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%239900ff'/%3E%3Cstop offset='1' stop-color='%239900ff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ffff00'/%3E%3Cstop offset='1' stop-color='%23ffff00' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FF0000'/%3E%3Cstop offset='1' stop-color='%23FF0000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230CF'/%3E%3Cstop offset='1' stop-color='%230CF' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  
+  .StaffDetailPage {
+    flex: 5;
+  }
+  
+  .StaffDetailPageTitleAndBack {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  
+  .StaffDetailPageTitle {
+    font-weight: 700;
+    font-size: 36px;
+  }
+  
+  .StaffDetailPageContainer {
+    display: flex;
+    height: max-content;
+    padding: 20px;
+  }
+  
+  .StaffDetailPageInfo {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px -5px #333;
+    height: 100%;
+    margin-right: 20px;
+    padding: 20px;
+  }
+  
+  .StaffDetailPageInfoBasic {
+    display: flex;
+    align-items: center;
+  }
+  
+  .StaffDetailPageInfoAvt {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    object-fit: cover;
+    margin-right: 40px;
+  }
+  
+  .StaffDetailPageInfoName {
+    font-weight: 600;
+    color: #333;
+  }
+  .StaffDetailPageInfoJob {
+    font-weight: 200;
+    color: #555;
+  }
+  
+  .StaffDetailPageInfoDetailList {
+    margin: 40px 0;
+  }
+  
+  .StaffDetailPageInfoDetailListTitle {
+    margin: 20px 0;
+    font-weight: 600;
+    color: rgba(238, 238, 238, 0.842);
+  }
+  
+  .StaffDetailPageInfoDetailItem {
+    display: flex;
+    align-items: center;
+    color: #333;
+    margin: 20px 0;
+    font-weight: 300;
+  }
+  
+  .StaffDetailPageInfoDetailItem .Icon {
+    margin: 0 10px;
+    color: #555;
+  }
+  
+  .StaffDetailPageEdit {
+    flex: 2;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px -5px #333;
+    height: 100%;
+  }
+  
+  .StaffDetailPageEditTitle {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 10px;
+  }
+  
+  .StaffDetailPageEditContainer {
+    padding: 20px;
+    display: flex;
+  }
+  
+  .StaffDetailPageEditText {
+    flex: 1;
+  }
+  
+  .StaffDetailPageEditTextLabel {
+    margin: 10px 0;
+  }
+  
+  .StaffDetailPageEditTextItemTitle {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 5px 0;
+  }
+  
+  .StaffDetailPageEditTextItemInput {
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    color: #333;
+    background-color: #ffff0000;
+  }
+  
+  .StaffDetailPageEditTextItemInput::placeholder {
+    color: rgba(85, 85, 85, 0.473);
+  }
+  
+  .StaffDetailPageEditAvt {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .UpdateAvt {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .IconPublic {
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .BtnSaveEditStaffDetail {
+    margin: 0 20px 20px 20px;
+    padding: 7px 20px;
+    border: none;
+    background-color: #2dc467;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  .BtnSaveEditStaffDetail:hover {
+    background-color: #11aa4c;
+  }
+  
+  .StaffDetailPageBack {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin: 20px 0 40px 20px;
+    padding: 7px 20px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .StaffDetailPageBack:hover {
+    background-color: #ffffffd7;
+  }
+  

@@ -10,8 +10,11 @@ import Products from "./pages/products/Products";
 import Product from "./pages/product/Product";
 import Analytics from "./pages/analytics/Analytics";
 import Hot from "./pages/hot/Hot";
+import Staff from "./pages/staff/Staff";
 
 import "./App.css";
+import StaffDetail from "./pages/staffDetail/StaffDetail";
+import Information from "./pages/information/Information";
 
 function App() {
   return (
@@ -53,6 +56,18 @@ function App() {
 
             <Route path="/Hot">
               <Hot />
+            </Route>
+
+            <Route path="/Staffs">
+              <Staff />
+            </Route>
+
+            <Route path="/Staff">
+              <StaffDetail />
+            </Route>
+
+            <Route path="/Information">
+              <Information />
             </Route>
 
           </Switch>

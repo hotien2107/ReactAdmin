@@ -1,10 +1,10 @@
-import "./Users.css"
+import "./Staff.css"
 import { DataGrid } from '@material-ui/data-grid';
 import { DeleteForever, Search } from "@material-ui/icons"
-import { UserList } from "../../data/UserList";
+import { StaffList } from "../../data/StaffList";
 import { Link } from "react-router-dom";
 
-export default function Users() {
+export default function Staff() {
     const columns = [
         {
             field: 'id',
@@ -13,20 +13,20 @@ export default function Users() {
         },
         {
             field: 'user',
-            headerName: 'User',
+            headerName: 'Staff',
             width: 250,
             renderCell: (params) => {
                 return (
-                    <div className="UserInfo">
-                        <img src={params.row.avt} alt="" className="UserAvt" />
-                        {params.row.user}
+                    <div className="StaffInfo">
+                        <img src={params.row.avt} alt="" className="StaffAvt" />
+                        {params.row.name}
                     </div>
                 )
             }
         },
         {
-            field: 'mail',
-            headerName: 'Mail',
+            field: 'position',
+            headerName: 'Position',
             width: 300
         },
         {
@@ -36,13 +36,13 @@ export default function Users() {
             renderCell: (params) => {
                 if (params.row.status === 'Active') {
                     return (
-                        <div className={"UserStatus " + params.row.status}>
+                        <div className={"StaffStatus " + params.row.status}>
                             {params.row.status}
                         </div>
                     )
                 }
                 return (
-                    <div className={"UserStatus " + params.row.status}>
+                    <div className={"StaffStatus " + params.row.status}>
                         {params.row.status}
                     </div>
                 )
@@ -59,11 +59,11 @@ export default function Users() {
             headerName: 'Action',
             width: 160,
             renderCell: (params) => (
-                <div className="UserIcon">
-                    <Link to={"/User/" + params.row.id} className="Link">
-                        <Search className="UserIconEdit" />
+                <div className="StaffIcon">
+                    <Link to={"/Staff/" + params.row.id} className="Link">
+                        <Search className="StaffIconEdit" />
                     </Link>
-                    <DeleteForever className="UserIconDelete" />
+                    <DeleteForever className="StaffIconDelete" />
                 </div>
             )
         },
@@ -71,18 +71,17 @@ export default function Users() {
 
 
     return (
-        <div className="Users">
-            <div className="UsersContainer">
-
-                <div className="UsersTitle">
-                    User List
+        <div className="Staff">
+            <div className="StaffContainer">
+                <div className="StaffTitle">
+                    Staff List
                 </div>
                 <DataGrid
-                    rows={UserList}
+                    rows={StaffList}
                     disableSelectionOnClick columns={columns}
                     pageSize={7}
                     checkboxSelection
-                    className="UsersTable"
+                    className="StaffTable"
                 />
             </div>
         </div>

@@ -74,37 +74,37 @@ export const chartData = [
 ];
 
 export const brandsData = [
-  { month: "Yonex", value: 135 },
-  { month: "Lining", value: 93 },
-  { month: "Victor", value: 61 },
-  { month: "Mizuno", value: 52 },
-  { month: "Other", value: 78 },
+  { name: "Yonex", value: 135 },
+  { name: "Lining", value: 93 },
+  { name: "Victor", value: 61 },
+  { name: "Mizuno", value: 52 },
+  { name: "Other", value: 78 },
 ];
 
 export const staffData = [
     {
-        month: 'Peace',
+        name: 'Peace',
         sales: 3684,
     },
     {
-        month: 'Rios',
+      name: 'Rios',
         sales: 2458,
     },
     {
-        month: 'Williams',
+      name: 'Williams',
         sales: 4567,
     },
     
     {
-        month: 'Miles',
+      name: 'Miles',
         sales: 1257,
     },
     {
-        month: 'Fernandez',
+      name: 'Fernandez',
         sales: 9876,
     },
     {
-        month: 'Jennie',
+      name: 'Jennie',
         sales: 2600,
     },
 ];

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { scaleOrdinal } from 'd3-scale';
 import { schemeCategory10 } from 'd3-scale-chromatic';
-import { staffData } from "../../data/ChartData";
+
 
 const colors = scaleOrdinal(schemeCategory10).range();
 
@@ -37,7 +37,7 @@ export default function CustomShapeBarChart(props) {
                 <BarChart
                     width={500}
                     height={300}
-                    data={staffData}
+                    data={props.data}
                     margin={{
                         top: 20,
                         right: 30,
@@ -51,7 +51,7 @@ export default function CustomShapeBarChart(props) {
                     <Tooltip/>
                     <Legend/>
                     <Bar dataKey={props.dataKeyBar} fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
-                        {staffData.map((entry, index) => (
+                        {props.data.map((entry, index) => (
                             <Cell key={`cell-${index}`} fill={colors[index % 20]} />
                         ))}
                     </Bar>

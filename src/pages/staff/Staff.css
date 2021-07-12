@@ -1,0 +1,81 @@
+.Staff {
+    flex: 5;
+    padding: 20px;
+  }
+  
+  .StaffContainer {
+    height: 650px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px -5px #333;
+  }
+  
+  .StaffInfo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .StaffAvt {
+    width: 35px;
+    height: 35px;
+    border-radius: 999px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .StaffIcon {
+    display: flex;
+    align-items: center;
+  }
+  
+  .StaffIconEdit {
+    background-color: #66a8de;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 32px !important;
+    cursor: pointer;
+  }
+  .StaffIconEdit:hover {
+    background-color: #3e8ccc;
+  }
+  
+  .StaffIconDelete {
+    background-color: #f54748;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 32px !important;
+    cursor: pointer;
+  }
+  .StaffIconDelete:hover {
+    background-color: #db2323;
+  }
+  
+  .StaffStatus {
+    line-height: 16px;
+    border-radius: 10px;
+    padding: 5px 10px;
+  }
+  
+  .StaffStatus.Active {
+    background-color: #d6fde5;
+    color: #3ecc75;
+  }
+  .StaffStatus.Inactive {
+    background-color: #ffd9d9;
+    color: #f73737;
+  }
+  .StaffTitle {
+    font-weight: 700;
+    font-size: 36px;
+    margin: 20px 20px 20px 0;
+  }
+  
+  .StaffTable {
+    height: 85% !important;
+  }
+  
