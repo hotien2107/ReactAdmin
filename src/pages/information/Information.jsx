@@ -1,19 +1,9 @@
 import "./Information.css"
 import { Link } from "react-router-dom"
-import { AccountBox, Event, PhoneAndroid, Email, Facebook, Publish, ArrowBackIos } from "@material-ui/icons"
-import { useState } from "react";
+import { AccountBox, Event, PhoneAndroid, Email, Facebook, ArrowBackIos } from "@material-ui/icons"
 
 export default function Information() {
-    let zoomStatus = "hide";
-    const [ZoomStatus, setZoomStatus] = useState(zoomStatus);
 
-    const ZoomIn = () => {
-        setZoomStatus("show");
-    }
-
-    const ZoomOut = () => {
-        setZoomStatus("hide");
-    }
     return (
         <div className="InformationPage">
             <div className="InformationPageTitleAndBack">
@@ -94,13 +84,6 @@ export default function Information() {
                         </div>
                     </div>
                 </div>
-
-
-            </div>
-
-            <div className={"ZoomImgBox " + ZoomStatus} onClick={ZoomOut}>
-                <img src="https://phunugioi.com/wp-content/uploads/2020/10/anh-dai-dien-avt-anime-1.jpg" alt="" className="ZoomImg" />
-
             </div>
         </div>
     )

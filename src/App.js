@@ -15,6 +15,7 @@ import Staff from "./pages/staff/Staff";
 import "./App.css";
 import StaffDetail from "./pages/staffDetail/StaffDetail";
 import Information from "./pages/information/Information";
+import Transactions from "./pages/transactions/Transactions";
 
 function App() {
   return (
@@ -34,11 +35,11 @@ function App() {
               <Home />
             </Route>
 
-            <Route path="/Users">
+            <Route path="/Films">
               <Users />
             </Route>
 
-            <Route path="/User/:userId">
+            <Route path="/Film/:filmId">
               <User />
             </Route>
 
@@ -46,8 +47,12 @@ function App() {
               <Products />
             </Route>
 
-            <Route path="/Product/:userId">
+            <Route path="/Product/:productId">
               <Product />
+            </Route>
+
+            <Route path="/Transactions">
+              <Transactions />
             </Route>
 
             <Route path="/Analytics">
@@ -58,11 +63,11 @@ function App() {
               <Hot />
             </Route>
 
-            <Route path="/Staffs">
+            <Route path="/Friends">
               <Staff />
             </Route>
 
-            <Route path="/Staff">
+            <Route path="/Friend">
               <StaffDetail />
             </Route>
 

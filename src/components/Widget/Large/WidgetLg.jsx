@@ -82,38 +82,39 @@ export default function WidgetLg(props) {
             <div className="WidgetLgTitle">{props.title}</div>
 
             <table className="WidgetLgTable">
-
-                <tr className="WidgetLgTr" >
+                <thead>
+                    <tr className="WidgetLgTr" >
+                        {
+                            dataTitle.map((value, key) => (
+                                <th className="WidgetLgTh" key={key}>
+                                    {value.row_title}
+                                </th >
+                            ))
+                        }
+                    </tr>
+                </thead>
+                <tbody>
                     {
-                        dataTitle.map((value, key) => (
-                            <th className="WidgetLgTh" key={key}>
-                                {value.row_title}
-                            </th >
-                        ))
+                        data.map((value, key) => {
+                            return (
+                                <tr className="WidgetLgTr" key={key}>
+                                    <th className="WidgetLgUser" >
+                                        <img src={value.user[0].avt} alt="" className="WidgetLgAvt" />
+                                        <span className="WidgetLgUserName">{value.user[0].name}</span>
+                                    </th>
+                                    <th className="WidgetLgDate">{value.date}</th>
+                                    <th className="WidgetLgAmount">{value.amount}</th>
+                                    <th className="WidgetLgStatus">
+                                        <Button type={value.typeButton} />
+                                    </th>
+                                </tr>
+                            )
+
+                        })
+
                     }
-                </tr>
 
-                {
-                    data.map((value, key) => {
-                        return (
-                            <tr className="WidgetLgTr" key={key}>
-                                <th className="WidgetLgUser" >
-                                    <img src={value.user[0].avt} alt="" className="WidgetLgAvt" />
-                                    <span className="WidgetLgUserName">{value.user[0].name}</span>
-                                </th>
-                                <th className="WidgetLgDate">{value.date}</th>
-                                <th className="WidgetLgAmount">{value.amount}</th>
-                                <th className="WidgetLgStatus">
-                                    <Button type={value.typeButton} />
-                                </th>
-                            </tr>
-                        )
-
-                    })
-
-                }
-
-
+                </tbody>
 
             </table >
             {/* 

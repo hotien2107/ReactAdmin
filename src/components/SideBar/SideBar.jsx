@@ -1,4 +1,4 @@
-import { Dashboard, Poll, Assignment, Whatshot, AssignmentInd, ShoppingBasket, MonetizationOn, Mail, Feedback, Message, Person, MenuOpen, Menu } from "@material-ui/icons"
+import { Dashboard, Poll, Assignment, Whatshot, AssignmentInd, ShoppingBasket, MonetizationOn, Person, MenuOpen, Menu } from "@material-ui/icons"
 import './SideBar.css'
 import SideBarMenu from './SideBarMenu'
 import { useState } from "react";
@@ -21,7 +21,6 @@ const menu = [
             {
                 SideBarItemName: "Hot",
                 SideBarItemIcon: Whatshot,
-
             },
         ],
 
@@ -30,7 +29,7 @@ const menu = [
         SideBarMenuName: "Quick Menu",
         SideBarItem: [
             {
-                SideBarItemName: "Users",
+                SideBarItemName: "Films",
                 SideBarItemIcon: AssignmentInd,
 
             },
@@ -48,31 +47,10 @@ const menu = [
 
     },
     {
-        SideBarMenuName: "Notifications",
+        SideBarMenuName: "Relationships",
         SideBarItem: [
             {
-                SideBarItemName: "Mail",
-                SideBarItemIcon: Mail,
-
-            },
-            {
-                SideBarItemName: "Feedback",
-                SideBarItemIcon: Feedback,
-
-            },
-            {
-                SideBarItemName: "Message",
-                SideBarItemIcon: Message,
-
-            },
-        ],
-
-    },
-    {
-        SideBarMenuName: "Manager",
-        SideBarItem: [
-            {
-                SideBarItemName: "Staffs",
+                SideBarItemName: "Friends",
                 SideBarItemIcon: Assignment,
 
             },
@@ -92,12 +70,10 @@ const menu = [
     },
 ];
 
-let Status = "Hide";
-
 
 export default function SideBar() {
 
-    const [status, setStatus] = useState(Status);
+    const [status, setStatus] = useState('Hide');
 
     const changeMenuStatus = () => {
         if (status === "Hide") {
@@ -135,7 +111,6 @@ export default function SideBar() {
             <div className={"SideBar " + status}>
                 <div className="MenuIcon">
                     <Menu className="IconInOut" onClick={changeMenuStatus} />
-    
                 </div>
                 <div className="SideBarWrapper">
                     {

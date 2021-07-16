@@ -5,16 +5,29 @@ import { chartData } from "../../data/ChartData"
 import { featuredData } from "../../data/FeaturedData"
 import WidgetLg from "../../components/Widget/Large/WidgetLg"
 import WidgetSm from "../../components/Widget/Small/WidgetSm"
+import { useState } from "react"
+
 
 
 export default function Home() {
-    const DataKey = ["Racket", "String"];
+    
+    const [featured, setFeatured] = useState('Spending');
+
+    function handleFeaturedChange(Featured) {
+        setFeatured(Featured);
+    }
+    function getDataKey() {
+        for (let x of featuredData) {
+            if(x.title === featured) return x.dataKey;          
+        }
+    }
+
     return (
         <div className="Home">
             <div className="HomeTitle">Dashboard</div>
-            <Featured data={featuredData} />
+            <Featured featured={featuredData} onFeaturedClick={handleFeaturedChange}/>
             <br/>
-            <BasicCharts data={chartData} dataKey={DataKey} title="Revenue" />
+            <BasicCharts data={chartData} dataKey={getDataKey()} title={featured} />
             <br/>
             <div className="Widget">
 
